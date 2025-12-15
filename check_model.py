@@ -1,9 +1,11 @@
 # This is the file: check_models.py
 import google.generativeai as genai
 import os
+from dotenv import load_dotenv
+load_dotenv()
 
-# --- PASTE YOUR API KEY HERE ---
-API_KEY = "AIzaSyDXCNwOuYRMR0HbcSizFGSIrnQy7FXEtAg"
+# --- Load API key from .env ---
+API_KEY = os.getenv("API_KEY")
 
 genai.configure(api_key=API_KEY)
 

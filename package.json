@@ -1,0 +1,31 @@
+{
+  "name": "jarvis",
+  "version": "1.0.0",
+  "description": "��#\u0000 \u0000A\u0000L\u0000i\u0000t\u0000a\u0000_\u0000A\u0000I\u0000\r\u0000 \u0000",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mohit23ucs172/ALita_AI.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/mohit23ucs172/ALita_AI/issues"
+  },
+  "homepage": "https://github.com/mohit23ucs172/ALita_AI#readme",
+  "devDependencies": {
+    "eslint": "^9.39.2",
+    "nodemon": "^3.1.11"
+  },
+  "dependencies": {
+    "axios": "^1.13.2",
+    "dotenv": "^17.2.3",
+    "express": "^5.2.1",
+    "lodash": "^4.17.21"
+  }
+}

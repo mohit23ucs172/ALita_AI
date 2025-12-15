@@ -1,11 +1,11 @@
 import google.generativeai as genai
 import os
+from dotenv import load_dotenv
+load_dotenv()
 
 # --- Configuration ---
-# PASTE YOUR API KEY HERE.
-# (A more secure way is to use environment variables, 
-# but this is the simplest way to start.)
-API_KEY = "AIzaSyDXCNwOuYRMR0HbcSizFGSIrnQy7FXEtAg" 
+# Load API key from .env
+API_KEY = os.getenv("API_KEY")
 
 genai.configure(api_key=API_KEY)
 

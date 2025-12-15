@@ -1,0 +1,74 @@
+# .gitignore for ALita_AI
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+*.egg-info/
+build/
+dist/
+.eggs/
+.pytest_cache/
+coverage.xml
+htmlcov/
+
+# Virtualenv / env files
+.env
+.env.*
+venv/
+.venv/
+ENV/
+venv.bak/
+pip-wheel-metadata/
+
+# Editors / IDEs
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Node
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+
+# Logs and runtime files
+*.log
+*.pid
+*.seed
+*.pid.lock
+
+# Generated audio / media (optional)
+*.mp3
+*.wav
+*.ogg
+
+# Databases
+*.sqlite3
+*.db
+
+# Misc
+*.pyc
+*.pyo
+*.pyd
+
+# Local environment/config
+local_settings.py
+
+# Ignore compiled C extensions
+*.so
+
+# Ignore coverage and test artifacts
+.coverage
+
+# JetBrains
+out/
+
+# End of .gitignore

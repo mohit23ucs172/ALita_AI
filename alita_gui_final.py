@@ -7,6 +7,8 @@ from PIL import Image, ImageTk, ImageSequence
 import google.generativeai as genai
 import speech_recognition as sr
 import os
+from dotenv import load_dotenv
+load_dotenv()
 import webbrowser
 import datetime
 import requests
@@ -20,9 +22,9 @@ from duckduckgo_search import DDGS
 import spotipy
 from spotipy.oauth2 import SpotifyOAuth
 # --- 3. PUT YOUR SPOTIFY KEYS HERE ---
-SPOTIPY_CLIENT_ID = "ed4cb6f97adb4e18ae5c7081600927cc"
-SPOTIPY_CLIENT_SECRET = "febd7de235cf46cfb36c1dcd40eca4be"
-SPOTIPY_REDIRECT_URI = "https://localhost:8888/callback"
+SPOTIPY_CLIENT_ID =os.getenv("SPOTIPY_CLIENT_ID")
+SPOTIPY_CLIENT_SECRET =os.getenv("SPOTIPY_CLIENT_SECRET")
+SPOTIPY_REDIRECT_URI =os.getenv("SPOTIPY_REDIRECT_URI")
 
 # --- Setup Spotify Authentication ---
 # This scope allows us to read and control playback
@@ -45,11 +47,11 @@ except Exception as e:
     print("Please check your Spotify keys and redirect URI.")
     sp = None
 
-# --- 1. PUT YOUR GEMINI KEY HERE ---
-GEMINI_API_KEY = "AIzaSyB6g66hmBK_M4-dOXl79bCcm4fKRBSMCPM"
+# --- 1. GEMINI key (read from .env) ---
+GEMINI_API_KEY = os.getenv("GEMINI_API_KEY")
 
-# --- 2. PUT YOUR ELEVENLABS KEY HERE ---
-ELEVENLABS_API_KEY = "sk_986f344b0bcb26618c467b2a2b12017c3d0d7ca97b5776d5"
+# --- 2. ELEVENLABS key (read from .env) ---
+ELEVENLABS_API_KEY = os.getenv("ELEVENLABS_API_KEY")
 
 # --- Configure APIs ---
 try:

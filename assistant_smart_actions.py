@@ -3,12 +3,15 @@ import speech_recognition as sr
 from gtts import gTTS
 from playsound import playsound
 import os
+from dotenv import load_dotenv
+load_dotenv()
 import webbrowser
 import datetime
 import json
 
 # --- Configuration ---
-API_KEY = "AIzaSyDXCNwOuYRMR0HbcSizFGSIrnQy7FXEtAg" 
+# Load API key from .env
+API_KEY = os.getenv("API_KEY")
 
 # --- Gemini Model Setup ---
 genai.configure(api_key=API_KEY)
